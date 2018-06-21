@@ -16,12 +16,8 @@ _Ghbdtn? rfr ltkf& xnj yjdjuj& -> Привет, как дела? что ново
 ### Пример:
 ```bash
 ./start.py --eng "Ntrcn"
-
 ./start.py --rus "Еуче"
-
 ./start.py "GHbdtn"
-
 ./start.py --rus --path /home/user/file.txt
-
 ./start.py --eng --path /home/user/file.txt
 ```
