@@ -21,7 +21,6 @@ if __name__ == "__main__":
             status = file.save_file(result)
             layout.view_result("сохранено в текущей папке - " + status); exit(0) if type(status) == str else exit(1)
 
-
         # комбинации ключей без файла
         layout.get_text(sys.argv[-1])
         if sys.argv[1] == '-eng' and len(sys.argv) == 3:
