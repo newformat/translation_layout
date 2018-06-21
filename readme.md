@@ -9,6 +9,8 @@ Ghbdtn? rfr ltkf& xnj yjdjuj& -> Привет, как дела? что ново�
 
 -eng    текст английской раскладки на русскую
 
+-path   путь к файлу формата *.txt
+
 
 ### Без ключей:
 
@@ -16,8 +18,12 @@ Ghbdtn? rfr ltkf& xnj yjdjuj& -> Привет, как дела? что ново�
 
 
 ### Пример:
-./start.py -eng "Text"
+./start.py -eng "Ntrcn"
 
-./start.py -rus "Текст"
+./start.py -rus "Еуче"
 
-./start.py "Текст"
+./start.py "GHbdtn"
+
+./start.py -rus -path /home/user/file.txt
+
+./start.py -eng -path /home/user/file.txt

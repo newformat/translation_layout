@@ -12,7 +12,7 @@ class Layout:
 
 
     def view_result(self,text):
-        print('Результат:',text)
+        print('Результат: \"'+text+'\"')
 
 
     def eng_to_rus(self):
@@ -59,7 +59,7 @@ class Layout:
 
 
     def read_file(self, data):
-        if data == list:
+        if type(data) == list:
             self.text = "".join(data)
         else:
             return 1
@@ -68,6 +68,16 @@ class Layout:
 
 
 class File:
+    ''' Работа с файлом
+    attributes:
+        path_file   путь к файлу
+        path_save   путь сохранения результата
+    methods:
+        path_exists     проверяет путь к файлу
+        type_file       проверка файла на его тип через расширение
+        open_file       открытие и чтение файла в список
+        save_file       сохранение файла с результатом перевода
+    '''
     def __init__(self):
         self.path_file = None
         self.path_save = './'
@@ -101,6 +111,10 @@ class File:
 
     def save_file(self,data):
         self.path_save += basename(splitext(self.path_file)[0]) + '_save.txt'
-        with open(self.path_save,'w') as w:
-            w.write(data)
-        return self.path_save
+        if not isfile(self.path_save):
+            with open(self.path_save,'w') as w:
+                w.write(data)
+            return self.path_save
+        else:
+            print('Файл уже существует')
+            return False
