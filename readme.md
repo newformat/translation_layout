@@ -13,14 +13,8 @@ _Ghbdtn? rfr ltkf& xnj yjdjuj& -> Привет, как дела? что ново
 
 --path   путь к файлу формата *.txt
 
-
-### Без ключей:
-
-автоматическое определение
-
-
 ### Пример:
-./start.py --eng "Ntrcn"
+```bash ./start.py --eng "Ntrcn"```
 
 ./start.py --rus "Еуче"
 
