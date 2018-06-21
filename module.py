@@ -30,42 +30,42 @@ class Layout:
 
 
     def eng_to_rus(self):
-        abc_all = [
+        wordbook_all = [
             list(self.eng),
             list(self.rus)]
-        return self.translate_txt(abc_all)
+        return self.translate_txt(wordbook_all)
 
 
     def rus_to_eng(self):
-        abc_all = [
+        wordbook_all = [
             list(self.rus),
             list(self.eng)]
-        return self.translate_txt(abc_all)
+        return self.translate_txt(wordbook_all)
 
 
     def auto_translate(self):
-        for ch in self.text:
-            if ch in list(self.rus[13:46]):
+        for symbol in self.text:
+            if symbol in list(self.rus[13:46]):
                 return self.rus_to_eng()
-            elif ch in list(self.eng[13:44]):
+            elif symbol in list(self.eng[13:44]):
                 return self.eng_to_rus()
         return "[ текста для перевода нет ]"
 
 
-    def translate_txt(self, abc):
+    def translate_txt(self, wordbook):
         text = ''
-        for ch in self.text:
-            for i in range(0,len(abc[0])):
-                if ch == abc[0][i]:
-                    text+=abc[1][i]
+        for symbol in self.text:
+            for i in range(0,len(wordbook[0])):
+                if symbol == wordbook[0][i]:
+                    text+=wordbook[1][i]
                     break
-                elif ch == abc[0][i].upper():
-                    text += abc[1][i].upper()
+                elif symbol == wordbook[0][i].upper():
+                    text += wordbook[1][i].upper()
                     break
-                elif ch == ' ':
+                elif symbol == ' ':
                     text+=' '
                     break
-                elif ch == "\n":
+                elif symbol == "\n":
                     text+="\n"
                     break
         return text
