@@ -52,7 +52,6 @@ class Layout:
         return "[ текста для перевода нет ]"
 
 
-
     def translate_txt(self, abc):
         text = ''
         for ch in self.text:
