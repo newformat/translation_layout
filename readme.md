@@ -14,7 +14,8 @@ _Ghbdtn? rfr ltkf& xnj yjdjuj& -> Привет, как дела? что ново
 ```--path```   путь к файлу формата *.txt
 
 ### Пример:
-```bash ./start.py --eng "Ntrcn"```
+```bash
+./start.py --eng "Ntrcn"
 
 ./start.py --rus "Еуче"
 
@@ -23,3 +24,4 @@ _Ghbdtn? rfr ltkf& xnj yjdjuj& -> Привет, как дела? что ново
 ./start.py --rus --path /home/user/file.txt
 
 ./start.py --eng --path /home/user/file.txt
+```
