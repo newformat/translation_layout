@@ -1,6 +1,21 @@
 from os.path import isfile, splitext, basename
 
 class Layout:
+    ''' Работа с текстом раскладки
+    attributes:
+        rus     русская раскладка
+        eng     английская раскладка
+        text    текст перевода
+    methods:
+        get_text        получить текст
+        view_result     результта перевода
+        eng_to_rus      с англ. на рус. раскладку текста
+        rus_to_eng      c рус. на англ. раскладку текста
+        auto_translate  автоматическое определение языка
+        translate_txt   процесс перевода текста
+        read_file       загрузка текста из файла.
+
+    '''
     def __init__(self):
         self.rus = "ё1234567890-=йцукенгшщзхъфывапролджэ\\ячсмитьбю.Ё!\"№;%:?*()_+ХЪЖЭ/БЮ,"
         self.eng = "`1234567890-=qwertyuiop[]asdfghjkl;'\\zxcvbnm,./~!@#$%^&*()_+{}:\"|<>?"
